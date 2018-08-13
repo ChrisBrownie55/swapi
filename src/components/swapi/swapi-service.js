@@ -5,7 +5,7 @@ const people = [];
 export default class SwapiService {
   get people() {
     if (people.length > 0) {
-      return new Promise(resolve => resolve(people));
+      return people;
     }
     return fetch('https://swapi.co/api/people')
       .then(result => result.json())
